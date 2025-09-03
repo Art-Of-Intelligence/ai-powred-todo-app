@@ -27,6 +27,7 @@ Test:
 # -------------------------------
 class SubtaskBase(BaseModel):
     title: str = Field(..., min_length=1, max_length=200)
+    allocated_time: int = Field(..., ge=0)
     done: bool = False
 
 
